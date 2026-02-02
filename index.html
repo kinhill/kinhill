@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kin Hill | Arts & Regenerative Agriculture</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -25,16 +26,18 @@
             color: var(--cream); 
             background-color: var(--deep-forest);
             scroll-behavior: smooth;
+            overflow-x: hidden; /* Prevents unwanted side-scrolling on mobile */
         }
 
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--ochre); }
 
+        /* Mobile Friendly Nav */
         nav {
-            padding: 1.2rem 2rem;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(26, 38, 31, 0.95);
+            background: rgba(26, 38, 31, 0.98);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
@@ -42,36 +45,49 @@
             border-bottom: 1px solid rgba(217, 160, 91, 0.2);
         }
 
-        nav .logo { font-weight: 600; letter-spacing: 3px; color: var(--ochre); }
-        nav a { text-decoration: none; color: var(--cream); margin-left: 20px; font-size: 0.8rem; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
-        nav a:hover { color: var(--ochre); }
+        nav .logo { font-weight: 600; letter-spacing: 3px; color: var(--ochre); text-decoration: none; font-size: 1.2rem; }
+        
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--cream); font-size: 0.75rem; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--ochre); }
 
+        /* Hero */
         .hero {
-            height: 80vh;
+            height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(26, 38, 31, 0.8), rgba(26, 38, 26, 0.8)), 
-                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(26, 38, 31, 0.6), rgba(26, 38, 26, 0.6)), 
+                        url('images/main1.jpg');
             background-size: cover;
             background-position: center;
             padding: 20px;
         }
 
-        .hero h1 { font-size: clamp(3.5rem, 12vw, 6rem); margin-bottom: 0.2rem; }
-        .hero p { font-size: 1.1rem; color: var(--cream); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 2rem; opacity: 0.8; }
+        .hero h1 { font-size: clamp(3rem, 10vw, 6rem); margin-bottom: 0.5rem; }
+        .hero p { font-size: clamp(0.9rem, 4vw, 1.1rem); color: var(--cream); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 2rem; opacity: 0.9; }
 
-        .hero-socials { display: flex; gap: 30px; }
-        .hero-socials a { font-size: 2.8rem; color: var(--ochre); transition: all 0.4s ease; }
-        .hero-socials a:hover { color: var(--cream); transform: scale(1.1); }
+        .hero-socials { display: flex; gap: 25px; }
+        .hero-socials a { font-size: 2.2rem; color: var(--ochre); transition: 0.3s; }
 
-        section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; text-align: center; }
-        .leaf-divider { color: var(--clay); font-size: 2.5rem; margin-bottom: 1.5rem; }
-        .about-text { font-size: 1.3rem; max-width: 750px; margin: 0 auto; line-height: 1.9; font-weight: 300; }
+        /* Sections */
+        section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; text-align: center; }
 
-        /* Workshops Grid */
+        #about {
+            max-width: 100%;
+            background: linear-gradient(rgba(26, 38, 31, 0.85), rgba(26, 38, 31, 0.85)), 
+                        url('images/main2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 100px 5%;
+        }
+
+        .about-text { font-size: clamp(1.1rem, 4vw, 1.3rem); max-width: 800px; margin: 0 auto; line-height: 1.8; font-weight: 300; }
+
+        /* Workshop Grid - Mobile Optimized */
         .workshop-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -82,61 +98,85 @@
         .workshop-card {
             background: rgba(62, 86, 65, 0.3);
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 12px;
             border: 1px solid rgba(217, 160, 91, 0.1);
-            transition: 0.3s;
             text-align: left;
         }
 
-        .workshop-card:hover { border-color: var(--ochre); transform: translateY(-5px); }
-        .workshop-card h3 { margin-bottom: 10px; font-size: 1.5rem; }
-        .workshop-date { color: var(--clay); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-        .workshop-card p { font-size: 0.95rem; margin-top: 10px; opacity: 0.9; }
+        /* Gallery Grid - Mobile Responsive */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 40px;
+        }
 
-        /* Newsletter Signup */
-        .newsletter-box { 
+        .gallery-grid img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #lightbox img { max-width: 100%; max-height: 90%; border-radius: 4px; border: 2px solid var(--ochre); }
+
+        /* Contact Section */
+        .contact-box { 
             background: var(--moss); 
-            padding: 60px 40px; 
-            border-radius: 8px; 
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-        }
-        
-        .newsletter-box h2 { color: var(--ochre); margin-bottom: 15px; font-size: 2.5rem; }
-
-        .signup-form { display: flex; flex-wrap: wrap; gap: 15px; max-width: 550px; margin: 30px auto 0; }
-        .signup-form input { 
-            flex: 2; padding: 18px 25px; border: 1px solid rgba(242, 232, 213, 0.2); 
-            background: var(--deep-forest); color: var(--cream); border-radius: 4px; font-family: inherit;
+            padding: 50px 30px; 
+            border-radius: 15px; 
         }
 
-        .signup-form button { 
-            flex: 1; background: var(--clay); color: var(--cream); padding: 18px 30px; 
-            border: none; border-radius: 4px; cursor: pointer; font-weight: 700; text-transform: uppercase; transition: 0.3s;
+        .contact-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--ochre);
+            font-size: clamp(1.1rem, 5vw, 1.5rem);
+            word-break: break-all; /* Prevents long emails from breaking mobile layout */
+            text-decoration: none;
+            border-bottom: 2px solid var(--clay);
         }
-        .signup-form button:hover { background: var(--ochre); color: var(--deep-forest); }
 
-        footer { padding: 60px 40px; text-align: center; font-size: 0.85rem; color: var(--ochre); opacity: 0.6; }
+        footer { padding: 40px 20px; text-align: center; font-size: 0.8rem; color: var(--ochre); opacity: 0.7; }
 
-        @media (max-width: 600px) {
-            .signup-form { flex-direction: column; }
-            .hero h1 { font-size: 3rem; }
+        /* Mobile Specific Adjustments */
+        @media (max-width: 768px) {
+            nav { padding: 1rem 20px; }
+            .nav-links { display: none; } /* Consider adding a mobile menu icon if you have many links */
+            #about { background-attachment: scroll; } /* Parallax is jittery on mobile browsers */
+            .hero { height: 70vh; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); } /* 2 columns on mobile is cleaner */
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">KIN HILL</div>
-        <div>
-            <a href="#about">Our Story</a>
+        <a href="#" class="logo">KIN HILL</a>
+        <div class="nav-links">
+            <a href="#about">Story</a>
+            <a href="#community">Community</a>
             <a href="#workshops">Workshops</a>
-            <a href="#join">Newsletter</a>
+            <a href="#join">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
         <h1>Kin Hill</h1>
-        <p>Regeneration & Art</p>
+        <p>an intentional community in Cumbria</p>
         <div class="hero-socials">
             <a href="https://www.instagram.com/kinhillcumbria" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/theheugh" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -145,47 +185,96 @@
 
     <section id="about">
         <div class="leaf-divider"><i class="fas fa-seedling"></i></div>
-        <h2>Our Roots</h2>
+        <h2>Our Purpose</h2>
         <p class="about-text">
-            Kin Hill is a thriving arts and regenerative agriculture community.
+            Kin hill is about kinship and exploring relationship in all it’s dimensions. To ourselves, to each other, to the land and animals and to those yet to come that will call Kin Hill their home.
+            We are addressing the current paradigm that humans are an extractive and separated species. We live into our interdependence with all beings remembering that humans can be a beneficial species. The land sustains and nourishes us, we too can nourish the land.
         </p>
     </section>
 
+    <section id="community">
+        <div class="leaf-divider"><i class="fas fa-users"></i></div>
+        <h2>Community Days</h2>
+        <p class="about-text">
+            We host regular Community Days where you can come along and get involved in the Kin Hill Community. 
+            Activities can include tree planting, composting, fruit picking, apple juicing, building natural structures and much more.
+        </p>
+        <br>
+        <p class="about-text">
+            Lunch and hot drinks are provided and sometimes the pizza oven gets fired up! Interested? Email us <a href="#join" style="color: var(--ochre); text-decoration: underline;">here</a>.
+        </p>
+
+        <div class="gallery-grid">
+            <img src="images/community-day/applebarrow.JPG" alt="Community Day">
+            <img src="images/community-day/beds.JPG" alt="Community Day">
+            <img src="images/community-day/chloe.JPG" alt="Community Day">
+            <img src="images/community-day/compost2.JPG" alt="Community Day">
+            <img src="images/community-day/compostbird.JPG" alt="Community Day">
+            <img src="images/community-day/groupsilly.JPG" alt="Community Day">
+            <img src="images/community-day/grouptree.JPG" alt="Community Day">
+            <img src="images/community-day/lulu.JPG" alt="Community Day">
+            <img src="images/community-day/lunch.JPG" alt="Community Day">
+            <img src="images/community-day/lunchplate.JPG" alt="Community Day">
+            <img src="images/community-day/treeplanting.JPG" alt="Community Day">
+            <img src="images/community-day/welcome.JPG" alt="Community Day">
+        </div>
+    </section>
+
     <section id="workshops">
-        <h2>Upcoming Workshops</h2>
+        <h2>Workshops</h2>
         <div class="workshop-grid">
             <div class="workshop-card">
                 <span class="workshop-date">Spring 2026</span>
-                <h3>An Introduction To Fermentation</h3>
-                <p>Bring back biodiversity to your foundational community in your belly! </p>
+                <h3>Fermentation</h3>
+                <p>Nurture your gut biodiversity with traditional skills.</p>
             </div>
             <div class="workshop-card">
                 <span class="workshop-date">Summer 2026</span>
                 <h3>Wet Felting</h3>
-                <p></p>
+                <p>Tactile art using local wool, water, and soap.</p>
             </div>
             <div class="workshop-card">
                 <span class="workshop-date">Autumn 2026</span>
                 <h3>Foraging Photography</h3>
-                <p>Make photo's using natural pigments found on the land!</p>
+                <p>Creating imagery using natural pigments from the land.</p>
             </div>
         </div>
     </section>
 
     <section id="join">
-        <div class="newsletter-box">
-            <h2>Stay in the Loop</h2>
-            <p>Subscribe to follow our journey and be the first to know when workshop bookings open.</p>
-            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="signup-form">
-                <input type="email" name="email" placeholder="Your email address" required>
-                <button type="submit">Join the Circle</button>
-            </form>
+        <div class="contact-box">
+            <h2>Get in Touch</h2>
+            <p>For Community Days or workshop queries, email us at:</p>
+            <a href="mailto:Kinhillcollaborations@gmail.com" class="contact-link">
+                Kinhillcollaborations@gmail.com
+            </a>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2026 Kin Hill Community. <br> Rooted in Nature, Cultivated by Art.</p>
     </footer>
+
+    <div id="lightbox">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const galleryImgs = document.querySelectorAll('.gallery-grid img');
+
+        galleryImgs.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
 
 </body>
 </html>
