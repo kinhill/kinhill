@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Details | Kin Hill</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --deep-forest: #1A261F; 
+            --moss: #3E5641;        
+            --clay: #8C5E45;        
+            --ochre: #D9A05B;       
+            --cream: #F2E8D5;       
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            color: var(--cream); 
+            background-color: var(--deep-forest);
+            margin: 0;
+        }
+
+        h1, h2 { font-family: 'Playfair Display', serif; color: var(--ochre); }
+
+        /* Workshop Hero */
+        .workshop-hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* Replace the URL below with a photo of the specific workshop */
+            background: linear-gradient(rgba(26, 38, 31, 0.7), rgba(26, 38, 31, 0.7)), 
+                        url('images/workshop-header.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .workshop-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 10px; }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .back-link:hover { color: var(--ochre); }
+
+        /* Content Section */
+        .detail-container {
+            max-width: 800px;
+            margin: -50px auto 80px;
+            background: var(--deep-forest);
+            padding: 50px;
+            border-radius: 15px;
+            border: 1px solid rgba(217, 160, 91, 0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 10;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(217, 160, 91, 0.1);
+            padding-bottom: 20px;
+        }
+
+        .meta-item i { color: var(--ochre); margin-right: 8px; }
+
+        .btn {
+            display: inline-block;
+            background: var(--clay);
+            color: var(--cream);
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--ochre); color: var(--deep-forest); }
+
+        @media (max-width: 768px) {
+            .detail-container { margin: 20px; padding: 30px; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+    <header class="workshop-hero">
+        <h1>Fermentation</h1>
+        <p style="text-transform: uppercase; letter-spacing: 3px; color: var(--cream);">The Art of Living Food</p>
+    </header>
+
+    <article class="detail-container">
+        <div class="meta-info">
+            <div class="meta-item"><i class="far fa-calendar-alt"></i> Spring 2026</div>
+            <div class="meta-item"><i class="far fa-clock"></i> 10:00 - 16:00</div>
+            <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Kin Hill Barn</div>
+        </div>
+
+        <h2>About this Workshop</h2>
+        <p>
+            Join us for a hands-on exploration of the microbial world. In this workshop, we will dive into the ancient practice of fermentation, learning how to transform seasonal produce from the Kin Hill garden into vibrant, probiotic-rich foods.
+        </p>
+        <p style="margin-top: 20px;">
+            You will learn the science and soul of:
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Wild-brined Sauerkraut</li>
+                <li>Seasonal Kimchi variations</li>
+                <li>The basics of Kombucha and Water Kefir</li>
+            </ul>
+        </p>
+
+        <a href="mailto:Kinhillcollaborations@gmail.com?subject=Inquiry: Fermentation Workshop" class="btn">Inquire to Book</a>
+    </article>
+
+    <footer style="text-align: center; padding-bottom: 40px; opacity: 0.6; font-size: 0.8rem;">
+        &copy; 2026 Kin Hill
+    </footer>
+
+</body>
+</html>
