@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # or master, whichever you use
+  branch: main
 
 media_folder: "images"
 public_folder: "images"
@@ -14,5 +14,7 @@ collections:
         name: "home"
         fields:
           - {label: "Our Purpose", name: "about_text", widget: "text"}
-          - {label: "Community Day Text", name: "community_text", widget: "text"}
+          - {label: "Community Day Intro", name: "community_text", widget: "text"}
           - {label: "Studio Hire Teaser", name: "studio_teaser", widget: "text"}
+          - {label: "Workshops Intro", name: "workshops_header", widget: "text"}
+          - {label: "Newsletter Intro", name: "newsletters_intro", widget: "text"}

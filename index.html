@@ -339,17 +339,21 @@
         });
     </script>
     <script>
-        // CMS Fetcher - not really sure how this works
-        fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-        document.getElementById('purpose-content').innerText = data.about_text;
-        document.getElementById('community-content').innerText = data.community_text;
-        document.getElementById('studio-content').innerText = data.studio_teaser;
-        })
-        .catch(error => console.error('Error loading content:', error));
-    </script>
-    <script>
+  // 1. CONTENT FETCHER
+  // This looks at data.json and puts the text into the IDs on your page
+  fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        if(data.about_text) document.getElementById('purpose-content').innerText = data.about_text;
+        if(data.community_text) document.getElementById('community-content-1').innerText = data.community_text;
+        if(data.studio_teaser) document.getElementById('studio-content').innerText = data.studio_teaser;
+        if(data.workshops_header) document.getElementById('workshops-header-content').innerText = data.workshops_header;
+        if(data.newsletters_intro) document.getElementById('newsletters-content').innerText = data.newsletters_intro;
+    })
+    .catch(error => console.error('Error loading content:', error));
+
+  // 2. NETLIFY IDENTITY REDIRECT
+  // This sends you to /admin/ automatically after you log in
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {
