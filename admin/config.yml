@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    files:
+      - file: "data.json"
+        label: "Home Page Text"
+        name: "home"
+        fields:
+          - {label: "Our Purpose", name: "about_text", widget: "text"}
+          - {label: "Community Day Text", name: "community_text", widget: "text"}
+          - {label: "Studio Hire Teaser", name: "studio_teaser", widget: "text"}
