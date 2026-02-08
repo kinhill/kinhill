@@ -18,3 +18,5 @@ collections:
           - {label: "Studio Hire Teaser", name: "studio_teaser", widget: "text"}
           - {label: "Workshops Intro", name: "workshops_header", widget: "text"}
           - {label: "Newsletter Intro", name: "newsletters_intro", widget: "text"}
+          # Inside admin/config.yml under 'fields'
+          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "string"}

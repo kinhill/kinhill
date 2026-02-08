@@ -177,6 +177,8 @@
     <header class="hero">
         <h1>Kin Hill</h1>
         <p>An intentional community in Cumbria</p>
+
+<p id="hero-sub-content">Loading...</p>
         <div class="hero-socials">
             <a href="https://www.instagram.com/kinhillcumbria" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/theheugh" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -344,6 +346,7 @@
   fetch('data.json')
     .then(response => response.json())
     .then(data => {
+        if(data.hero_subtitle) document.getElementById('hero-sub-content').innerText = data.hero_subtitle;
         if(data.about_text) document.getElementById('purpose-content').innerText = data.about_text;
         if(data.community_text) document.getElementById('community-content-1').innerText = data.community_text;
         if(data.studio_teaser) document.getElementById('studio-content').innerText = data.studio_teaser;
