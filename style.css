@@ -244,6 +244,29 @@ section:nth-of-type(even) {
     transform: scale(1.02); 
 }
 
+/*--- POSTERS --- */
+.posters {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.posters img {
+    /*width: 100%; */
+    height: 400px; 
+    object-fit: cover; 
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.4s; 
+    filter: brightness(0.8);
+}
+
+.posters img:hover { 
+    filter: brightness(1); 
+    transform: scale(1.02); 
+}
+
+
 /* --- LIGHTBOX --- */
 #lightbox {
     display: none; 

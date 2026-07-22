@@ -33,7 +33,11 @@
             <a href="https://www.instagram.com/kinhillcumbria" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/theheugh" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
-         <div><a href="https://www.kinhill.co.uk/pages/fermentation" class="btn">New Worshop - More info</a></div>
+         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+            <a href="pages/fermentation.html" class="btn">NEW FERMENTATION WORKSHOP</a>
+            <a href="https://www.trybooking.com/uk/events/landing/117172" target="_blank" class="btn">NEXT COMMUNITY DAY</a>
+        </div>
+     
     </header>
 
     <section id="about">
@@ -47,13 +51,18 @@
     <section id="community">
         <div class="section-content">
             <div class="leaf-divider"><i class="fas fa-users"></i></div>
-            <h2>Community Days</h2>
-            <p class="about-text" id="community-content-1">We host regular Community Days where you can come along and get involved in the Kin Hill Community. Depending on the season, activities include tree planting, compost turning, fruit picking, apple juicing, and building natural structures.</p>
+            <h2>Community Day</h2>
+            <p class="about-text" id="community-content-1">We host regular Community Days where you can come along and get involved in the Kin Hill Community. Depending on the season, activities include tree planting, compost turning, fruit picking, apple juicing, and building natural structures. Hot drinks and home cooked lunch provided.</p>
             <br>
-            <p class="about-text">
-                Hot drinks and home cooked lunch provided. If you're interested in coming along, email us <a href="#join" style="color: var(--ochre); text-decoration: underline;">here</a>.
-            </p>
-
+            <p class="about-text">Join us for our next community day! for more information or to book, click below</p>
+                <a href="https://www.trybooking.com/uk/events/landing/117172" class="btn">INFO & BOOKING</a>
+                <br>
+            <div class="posters">
+                <img src="images/community-day/posters/CD-dates.jpeg">
+                <img src="images/community-day/posters/CD-expect.jpeg">
+            </div>
+            <br>
+            <h2>Previous Community Days</h2>
             <div class="gallery-grid">
                 <img src="images/community-day/applebarrow.JPG" alt="Community Day">
                 <img src="images/community-day/beds.JPG" alt="Community Day">
@@ -212,6 +221,9 @@
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         document.querySelectorAll('.gallery-grid img').forEach(img => {
+            img.onclick = () => { lightbox.style.display = 'flex'; lightboxImg.src = img.src; }
+        });
+        document.querySelectorAll('.posters img').forEach(img => {
             img.onclick = () => { lightbox.style.display = 'flex'; lightboxImg.src = img.src; }
         });
         lightbox.onclick = () => lightbox.style.display = 'none';
