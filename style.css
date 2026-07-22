@@ -367,6 +367,7 @@ section:nth-of-type(even) {
 
     .btn { 
         margin-bottom: 40px; 
+        margin-top: 5px;
 }
 
 .btn:hover { 
