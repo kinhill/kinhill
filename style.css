@@ -357,10 +357,16 @@ section:nth-of-type(even) {
     color: var(--cream); 
     padding: 15px 35px; 
     border-radius: 5px; 
-    margin: 40px auto 0; 
+    margin: 20px auto 0; 
     font-weight: 600; 
     text-align: center; 
     max-width: 250px; 
+}
+
+@media (max-width: 768px) {
+
+    .btn { 
+        margin-bottom: 40px; 
 }
 
 .btn:hover { 
