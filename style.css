@@ -245,6 +245,23 @@ section:nth-of-type(even) {
 }
 
 /*--- POSTERS --- */
+@media (max-width: 768px) {
+
+    .posters {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        background: inherit;
+    }
+
+    .posters img {
+        width: 100%;
+        height: 240px;
+        object-fit: contain;
+        background: inherit;
+    }
+
+}
 .posters {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 15px;
@@ -252,7 +269,6 @@ section:nth-of-type(even) {
 }
 
 .posters img {
-    /*width: 100%; */
     height: 400px; 
     object-fit: cover; 
     cursor: pointer;
