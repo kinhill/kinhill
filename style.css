@@ -442,7 +442,7 @@ footer {
 
 @media (max-width: 768px) {
     #studio-hire {
-       /* background-attachment: scroll;*/
+       background-attachment: scroll;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
