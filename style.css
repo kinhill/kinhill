@@ -340,7 +340,7 @@ section:nth-of-type(even) {
 }
 
 .detail-container { 
-    max-width: 800px; 
+    max-width: 1300px; 
     margin: -80px auto 60px; 
     background: var(--deep-forest); 
     padding: 50px; 
