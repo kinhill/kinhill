@@ -23,8 +23,16 @@
         <div class="meta-info">
             <div class="meta-item"><i class="far fa-calendar-alt"></i> September 12th 2026</div>
             <div class="meta-item"><i class="far fa-clock"></i> 10:00 - 16:00</div>
-            <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Kin Hill Community, Lanercost (Details in confirmation email)</div>
+            <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Kin Hill Community, Lanercost (Directions in confirmation email)</div>
         </div>
+
+        <h2>Location</h2>
+        <div class="gallery-grid">
+                <img src="../images/studio-main.jpg" alt="Kin Hill Studio">
+        </div>
+        
+        <p>Surrounded by 80 acres of land Kin Hill is made up of veg growing areas, fields, hedge rows, semi-ancient woodland, the Kingwater river and a swimming lake. At the centre of our land is the studio, where our workshop will take place. A calm and beautiful space with wooden floors, high ceilings and tall windows to take in the surrounding Cumbrian hills as we work. </p>
+      
             <div class="gallery-grid">
                 <img src="../images/fermentation/ginger-bug/grating.JPG" alt="grating ginger bug">
                 <img src="../images/fermentation/ginger-bug/adding-ginger.JPG" > 
@@ -73,7 +81,7 @@
                 <img src="../images/fermentation/hotsauce1.JPG" alt="Hot sauce">
                 <img src="../images/fermentation/kraut1.JPG" alt="Sauerkraut">
                 <img src="../images/fermentation/beetroot1.JPG" alt="Beetroot">
-                <img src="../images/fermentation/beer3.JPG" alt="Beer">
+                <img src="../images/fermentation/beer1.JPG" alt="Beer">
                 <img src="../images/fermentation/waterkefir.JPG" alt="water-kefir">
                 <img src="../images/fermentation/tomatoes.JPG" alt="tomatoes">
             </div>
@@ -82,6 +90,29 @@
     <footer>
         <p>&copy; 2026 Kin Hill</p>
     </footer>
+<div id="lightbox">
+        <img id="lightbox-img" src="">
+    </div>
 
+    <script>
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        document.querySelectorAll('.gallery-grid img').forEach(img => {
+            img.onclick = () => { lightbox.style.display = 'flex'; lightboxImg.src = img.src; }
+        });
+        document.querySelectorAll('.posters img').forEach(img => {
+            img.onclick = () => { lightbox.style.display = 'flex'; lightboxImg.src = img.src; }
+        });
+        lightbox.onclick = () => lightbox.style.display = 'none';
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navList = document.getElementById('nav-list');
+        menuBtn.onclick = () => navList.classList.toggle('active');
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.onclick = () => navList.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
