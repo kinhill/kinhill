@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAMUTO | Kin Hill</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <a href="../index.html" class="back-link" style="position: absolute; top: 20px; left: 20px; z-index: 20;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+    <header class="workshop-hero">
+        <h1>MAKING MUSIC TOGETHER</h1>
+        <p style="text-transform: uppercase; letter-spacing: 3px; color: var(--cream); font-size: 0.8rem;"></p>
+        <!--div>
+            <a href="https://www.trybooking.com/uk/GWPE" target="_blank" class="btn">Book Now</a>
+        </div-->
+    </header>
+
+    <article class="detail-container">
+        <div class="meta-info">
+            <div class="meta-item"><i class="far fa-calendar-alt"></i>Thurs, October 8th, 2026</div>
+            <div class="meta-item"><i class="far fa-clock"></i> 10 - 9:30 PM</div>
+            <div class="meta-item"><i class="fas fa-map-marker-alt"></i> The Studio, Kin Hill, Walton</div>
+        </div>
+
+        <h2>Making Music Together</h2>
+        <p>In August I spent a week in Germany with Music do Circulo, an amazing Brazilian trio who lead a group of all musical levels to create the music of the moment together.</p>
+
+        <p>It has inspired me to swim in the waters of uncertainty that making stuff up in the moment requires of us. Of course in ‘real life’ we are doing this all the time but musically it always seems to me to be rather more intimidating.</p>
+
+        <p>I would love it if you would join me to be part of a group that explores this together, a singing group that has a different flavour, delicious but distinct from my previous experience of leading known and knowable songs (though it might occasionally include that too).</p>
+
+        <p>I will be offering the foundations of rhythm, body percussion and very simple circle songs.  These will be supported by body practices and 1:1 check-ins aimed to soothe our nervous systems.</p>
+
+        <p>If you want to connect through making music with others, to sing, to tap your body and move please come and have a go. It is so much fun, enriching and uplifting to leap into these waters together and find that we can float, play, splash about and make beautiful waves together.
+
+        <p>There will be no payment required to attend while I see whether this is something that works however any donations towards the running costs of the studio are always most welcome.<BR><BR>
+
+       <p> <b>BOOKING REQUIRED: Please note that after the first session Oct 8th this will become a closed group. New participants will only be able to join at the beginning of each term (eg January 14th, if there is the thirst to continue). I hope that by doing the sessions this way the group will cumulatively build a foundation of familiarity, trust and progression.  </b></p><BR>
+
+        <p>Please email for further info or message Lulu on 07891 908381
+
+        <p>More information about Music do Circulo here: <b><a href="https://www.musicadocirculo.com/en" target="_blank" >www.musicadocirculo.com/en</a></b></p><BR>
+
+            <img src="../images/mamuto/mamuto_flyer.jpg" width="60%" alt="making music together poster">
+         
+
+    <footer>
+        <p>&copy; 2026 Kin Hill</p>
+    </footer>
+<div id="lightbox">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        document.querySelectorAll('.gallery-grid img').forEach(img => {
+            img.onclick = () => { lightbox.style.display = 'flex'; lightboxImg.src = img.src; }
+        });
+        document.querySelectorAll('.posters img').forEach(img => {
+            img.onclick = () => { lightbox.style.display = 'flex'; lightboxImg.src = img.src; }
+        });
+        lightbox.onclick = () => lightbox.style.display = 'none';
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navList = document.getElementById('nav-list');
+        menuBtn.onclick = () => navList.classList.toggle('active');
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.onclick = () => navList.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
