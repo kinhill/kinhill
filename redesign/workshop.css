@@ -1,0 +1,348 @@
+/* Hard-coded local path injection rules to bypass cross-origin browser security locks */
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('Shrikhand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal0.8
+}
+
+:root {
+    --bg-poster-blue: #66a9c3;
+    --coral-red: #e64a33;
+    --mustard-yellow: #f4c430; 
+    --charcoal: #2b2b2b;
+    --cream: #f4c430; 
+}
+
+
+body {
+    /* Layers your exact slate-blue tone natively behind the texture map */
+    background: linear-gradient(rgba(102, 169, 220, 0.85), rgba(102, 169, 220, 0.7)), 
+                url('images/paper_361.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: var(--bg-poster-blue);
+    
+    color: var(--charcoal);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Color-based emphasis configuration instead of using font-weight shifts */
+strong, em, b, i {
+    color: var(--coral-red);
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   FORMATTED NAVIGATION BAR STYLING
+   ========================================================================== */
+.global-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4%;
+    background-color: var(--mustard-yellow);
+    border-bottom: 4px solid var(--charcoal);
+}
+
+.nav-logo {
+    font-family: 'Shrikhand', serif;
+    font-size: 1.6rem;
+    color: var(--coral-red);
+    letter-spacing: 1px;
+}
+
+.nav-home-link {
+    color: var(--charcoal);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav-home-link:hover {
+    color: var(--coral-red);
+    border-color: var(--coral-red);
+}
+
+/* ==========================================================================
+   HERO LAYOUT SEGMENTS
+   ========================================================================== */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-family: 'Shrikhand', serif;
+    font-size: 4.6rem;
+    color: var(--coral-red);
+    line-height: 0.95;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    text-shadow: 3px 3px 0px var(--mustard-yellow);
+}
+
+.tagline {
+    font-size: 1.6rem;
+    color: var(--coral-red);
+    font-weight: bold;
+    background-color: var(--mustard-yellow);
+    display: inline-block;
+    padding: 8px 18px;
+    margin-bottom: 35px;
+    border: 3px solid var(--charcoal);
+    transform: rotate(-1deg);
+    box-shadow: 4px 4px 0px var(--charcoal);
+}
+
+/* Cleaned Subtitle Styling: Floating and White Text */
+.subtitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    color: #ffffff; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    line-height: 1.5;
+}
+
+.logistics-card {
+    background-color: var(--mustard-yellow);
+    border: 3px solid var(--charcoal);
+    padding: 30px;
+    box-shadow: 8px 8px 0px var(--charcoal);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.time-badge {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dates-list {
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+    color: var(--coral-red);
+    font-weight: bold;
+}
+
+.location-summary {
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   UI BUTTON MODULES
+   ========================================================================== */
+.btn-primary, .btn-large {
+    background-color: var(--coral-red);
+    color: #ffffff; /* Text color securely locked to white */
+    text-decoration: none;
+    font-family: 'Shrikhand', serif;
+    padding: 14px 34px;
+    font-size: 1.3rem;
+    border: 3px solid var(--charcoal);
+    display: inline-block;
+    box-shadow: 4px 4px 0px var(--charcoal);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-large {
+    font-size: 1.7rem;
+    padding: 16px 42px;
+}
+
+.btn-primary:hover, .btn-large:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--charcoal);
+}
+
+/* ==========================================================================
+   CONTENT LAYOUT PANELS
+   ========================================================================== */
+.content-wrapper {
+    max-width: 1050px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-family: 'Shrikhand', serif;
+    color: var(--coral-red);
+    font-size: 2.6rem;
+    text-shadow: 2px 2px 0px var(--mustard-yellow);
+    border-bottom: 3px dashed var(--charcoal);
+    padding-bottom: 10px;
+    margin-bottom: 35px;
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.intro-text {
+    font-size: 1.45rem;
+    line-height: 1.6;
+    color: var(--charcoal);
+}
+
+/* Graphic Layer Configurations */
+.graphic-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.poster-styled-img {
+    width: 100%;
+    height: auto;
+    border: 3px solid var(--charcoal);
+    box-shadow: 6px 6px 0px var(--charcoal);
+    background-color: var(--mustard-yellow); 
+}
+
+.notice-box {
+    background-color: var(--mustard-yellow);
+    border: 3px solid var(--charcoal);
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 5px 5px 0px var(--charcoal);
+}
+
+/* Process Flow Grid Layout */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.process-step {
+    background: var(--mustard-yellow);
+    border: 3px solid var(--charcoal);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 4px 4px 0px var(--charcoal);
+}
+
+.process-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid var(--charcoal);
+    margin-bottom: 12px;
+}
+
+.step-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Course Highlight Grid Blocks with Image Caps */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.highlights-grid .card {
+    background-color: var(--mustard-yellow);
+    border: 3px solid var(--charcoal);
+    padding: 0 0 25px 0;
+    overflow: hidden;
+    box-shadow: 6px 6px 0px var(--charcoal);
+    text-align: left;
+}
+
+.card-image-wrap {
+    width: 100%;
+    height: 200px;
+    border-bottom: 3px solid var(--charcoal);
+}
+
+.card-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlights-grid .card h3 {
+    margin: 20px 25px 10px 25px;
+    color: var(--coral-red);
+    font-family: 'Shrikhand', serif;
+    font-size: 1.5rem;
+}
+
+.highlights-grid .card p {
+    margin: 0 25px;
+}
+
+/* Location Gallery Wrap */
+.location-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* CTA Block Wrapper */
+.cta-section {
+    text-align: center;
+    background-color: var(--mustard-yellow);
+    border: 3px solid var(--charcoal);
+    padding: 50px 20px;
+    box-shadow: 8px 8px 0px var(--charcoal);
+}
+
+.cta-section h2 {
+    border: none;
+    margin-bottom: 15px;
+    padding: 0;
+    text-shadow: none;
+}
+
+.cta-section p {
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: var(--coral-red);
+    color: var(--mustard-yellow);
+    text-align: center;
+    padding: 25px 20px;
+    font-weight: bold;
+    border-top: 4px solid var(--charcoal);
+}
+
+/* Responsive Scaling Overrides */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.8rem;
+    }
+    .split-layout, .location-gallery, .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+}
