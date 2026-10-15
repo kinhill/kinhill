@@ -90,7 +90,7 @@ strong, em, b, i {
     line-height: 0.95;
     margin-bottom: 20px;
     text-transform: capitalize;
-    text-shadow: 3px 3px 0px var(--mustard-yellow);
+    text-shadow: 3px 3px 0px var(--charcoal);
 }
 
 .tagline {
@@ -187,7 +187,7 @@ h2 {
     font-family: 'Shrikhand', serif;
     color: var(--coral-red);
     font-size: 2.6rem;
-    text-shadow: 2px 2px 0px var(--mustard-yellow);
+    text-shadow: 2px 2px 0px var(--charcoal);
     border-bottom: 3px dashed var(--charcoal);
     padding-bottom: 10px;
     margin-bottom: 35px;
